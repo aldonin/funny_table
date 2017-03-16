@@ -14,11 +14,11 @@ $(".go").click(function() {
 });
 
 $(".minus").click(function() {
-	var value = $(this).next();
+	var value = $(this).prev();
 	value.html(value.html() - 1);
 });
 
 $(".plus").click(function() {
-	var value = $(this).prev();
+	var value = $(this).prev().prev();
 	value.html(1*value.html() + 1);
 });

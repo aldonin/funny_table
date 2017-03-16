@@ -1,8 +1,23 @@
+@font-face {
+    font-family: myFont;
+    src: url(fonts/YanoneKaffeesatz-Bold.ttf);
+}
+
+body, input {
+	font-family: myFont;
+}
+
 .game {
 	display: none;
     background: black;
     width: 100%;
     height: 100%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;
+    padding-top: 10px;
 }
 
 .board {
@@ -25,7 +40,7 @@
     min-height: 100%;
     min-width: 80%;
     text-align: center;
-    font-size: 50px;
+    font-size: 450%;
 }
 
 .go {
@@ -35,6 +50,7 @@
     height: 15%;
     background: #ffe000;
     font-size: 60px;
+    cursor: pointer;
 }
 
 .go div {
@@ -50,16 +66,42 @@
     padding-top: 16px;
     padding-bottom: 16px;
     background: yellow;
-    font-size: 50px;
+    font-size: 450%;
+    margin-top: 15px;
 }
 
 .row > div {
 	text-align: center;
     width: 49%;
     display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .control {
 	width: 30%;
     display: inline-block;
+}
+
+.minus, .plus {
+	cursor: pointer;
+	border-style: solid;
+	width: 10%;
+}
+
+.row:nth-child(1) {
+	background: #ea4242;
+}
+
+.row:nth-child(2) {
+	background: #927eff;
+}
+
+.row:nth-child(3) {
+	background: #9458d6;
+}
+
+.row:nth-child(4){
+	background: #dde01d;
 }
